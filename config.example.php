@@ -1,0 +1,3 @@
+<?php
+$telegramBotToken = 'YOUR_TELEGRAM_BOT_TOKEN';
+$telegramChatId = 'YOUR_TELEGRAM_CHAT_ID';

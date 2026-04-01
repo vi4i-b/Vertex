@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertex | Smart Living & Future Home</title>
+    <meta
+      name="description"
+      content="Vertex — smart living магазин в Баку с премиальными гаджетами для дома, setup-зоны и эстетичного everyday-tech."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="ambient-bg__mesh"></div>
+      <div class="ambient-bg__grid"></div>
+      <div class="ambient-bg__orb ambient-bg__orb--a"></div>
+      <div class="ambient-bg__orb ambient-bg__orb--b"></div>
+      <div class="ambient-bg__orb ambient-bg__orb--c"></div>
+      <div class="ambient-bg__ring"></div>
+    </div>
+
+    <div class="page-shell">
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <div class="topbar">
+            <div>
+              <p class="eyebrow">Vertex Smart Living</p>
+              <p class="location" data-i18n="location">Баку, Азербайджан</p>
+            </div>
+            <div class="lang-switch" aria-label="Language switch">
+              <button type="button" class="is-active" data-lang-btn="ru">RU</button>
+              <button type="button" data-lang-btn="az">AZ</button>
+            </div>
+          </div>
+
+          <div class="hero-copy-main">
+            <h1 data-i18n="heroTitle">Vertex — умные гаджеты для красивого дома</h1>
+            <p data-i18n="heroText">
+              Магазин smart living решений для людей, которые любят комфорт, чистую эстетику и ощущение будущего в повседневной жизни.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#quickbuy" data-i18n="orderNow">Заказать сейчас</a>
+            <a class="button button-secondary" href="#catalog" data-i18n="catalogCta">Смотреть каталог</a>
+          </div>
+
+          <section class="about-card glass-card">
+            <p class="eyebrow" data-i18n="aboutLabel">О магазине</p>
+            <p class="about-text" data-i18n="aboutText">
+              Vertex подбирает современные устройства для дома и setup-зоны без дешевого маркетингового шума: только те гаджеты, которые реально выглядят эффектно, решают бытовые задачи и подходят под быстрый городской ритм Баку.
+            </p>
+            <div class="mini-points">
+              <span data-i18n="aboutPoint1">Премиальная подача и понятный выбор</span>
+              <span data-i18n="aboutPoint2">Быстрая доставка по Баку</span>
+              <span data-i18n="aboutPoint3">Помощь с запуском и настройкой</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="hero-showcase">
+          <div class="showcase-stack">
+            <article class="showcase-card showcase-card-main">
+              <img src="media/products/gravity.jpg" alt="Vertex Gravity" />
+            </article>
+            <article class="showcase-card showcase-card-top">
+              <img src="media/products/secure-touch.jpg" alt="Vertex Secure Touch" />
+            </article>
+            <article class="showcase-card showcase-card-bottom">
+              <img src="media/products/prism.jpg" alt="Vertex Prism" />
+            </article>
+          </div>
+
+          <aside class="showcase-note glass-card">
+            <span data-i18n="featured">Собранная подборка</span>
+            <strong data-i18n="featuredText">
+              Реальные найденные товары уже добавлены в каталог с обновленными фото и локальной розничной ценой.
+            </strong>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <section class="section intro reveal">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Store Focus</p>
+              <h2 data-i18n="introTitle">Технологии, которые делают пространство дороже на вид и удобнее в жизни</h2>
+            </div>
+            <p data-i18n="introText">
+              Vertex ориентирован на молодых специалистов, геймеров и любителей гаджетов, которые хотят не просто купить устройство, а собрать вокруг себя современную и эстетичную среду.
+            </p>
+          </div>
+        </section>
+
+        <section class="section reveal delivery-section">
+          <div class="glass-card delivery-card">
+            <div class="delivery-item">
+              <span data-i18n="deliveryLabel1">Формат доставки</span>
+              <strong data-i18n="deliveryValue1">Под заказ</strong>
+            </div>
+            <div class="delivery-item">
+              <span data-i18n="deliveryLabel2">Средний срок</span>
+              <strong data-i18n="deliveryValue2">7-20 дней</strong>
+            </div>
+            <p data-i18n="deliveryText">
+              Точный срок зависит от поставщика и подтверждается после оформления заказа.
+            </p>
+          </div>
+        </section>
+
+        <section class="section reveal" id="catalog">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Curated Catalog</p>
+              <h2 data-i18n="productsTitle">Каталог Vertex</h2>
+            </div>
+            <p data-i18n="productsText">
+              Витрина построена на реальных товарах: мы обновили карточки, подставили их фотографии и выставили готовую цену для магазина.
+            </p>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="section reveal cart-section" id="cart">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Shopping Cart</p>
+              <h2 data-i18n="cartTitle">Корзина покупок</h2>
+            </div>
+            <p data-i18n="cartText">
+              Добавляйте несколько товаров, меняйте количество и отправляйте весь заказ одним сообщением в WhatsApp.
+            </p>
+          </div>
+
+          <div class="cart-layout">
+            <div class="glass-card cart-items-panel">
+              <div class="cart-panel-head">
+                <strong data-i18n="cartSelected">Выбранные товары</strong>
+                <button class="button button-secondary button-compact" id="cartClearButton" type="button" data-i18n="clearCart">
+                  Очистить
+                </button>
+              </div>
+              <p class="cart-empty" id="cartEmpty" data-i18n="cartEmpty">Корзина пока пуста.</p>
+              <div class="cart-list" id="cartList"></div>
+            </div>
+
+            <form class="glass-card cart-summary" id="cartForm">
+              <div class="cart-summary-row">
+                <span data-i18n="cartItemsCount">Товаров</span>
+                <strong id="cartCount">0</strong>
+              </div>
+              <div class="cart-summary-row cart-summary-row--total">
+                <span data-i18n="cartTotal">Итого</span>
+                <strong id="cartTotal">₼0.00</strong>
+              </div>
+
+              <label>
+                <span data-i18n="nameField">Имя</span>
+                <input id="cartNameInput" name="cartName" type="text" required />
+              </label>
+
+              <label>
+                <span data-i18n="phoneField">Номер телефона</span>
+                <input
+                  id="cartPhoneInput"
+                  name="cartPhone"
+                  type="tel"
+                  inputmode="tel"
+                  placeholder="+994 50 000 00 00"
+                  required
+                />
+              </label>
+
+              <button class="button button-primary button-full" id="cartCheckoutButton" type="submit" data-i18n="cartCheckout">
+                Отправить корзину в WhatsApp
+              </button>
+              <p class="form-status" id="cartStatus" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-head compact">
+            <div>
+              <p class="eyebrow">Why Vertex</p>
+              <h2 data-i18n="whyTitle">Почему покупают у Vertex</h2>
+            </div>
+          </div>
+
+          <div class="why-grid">
+            <article class="glass-card why-card">
+              <div class="icon-chip"></div>
+              <h3 data-i18n="why1Title">Отобранный ассортимент</h3>
+              <p data-i18n="why1Text">Мы не перегружаем каталог десятками похожих позиций и показываем только сильные модели.</p>
+            </article>
+            <article class="glass-card why-card">
+              <div class="icon-chip"></div>
+              <h3 data-i18n="why2Title">Локальный сервис</h3>
+              <p data-i18n="why2Text">Быстрый контакт, доставка по Баку и помощь с выбором без долгих переписок и регистраций.</p>
+            </article>
+            <article class="glass-card why-card">
+              <div class="icon-chip"></div>
+              <h3 data-i18n="why3Title">Эстетика + польза</h3>
+              <p data-i18n="why3Text">Каждый товар должен не только работать, но и усиливать визуальный стиль пространства.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal quickbuy-section" id="quickbuy">
+          <div class="quickbuy-copy">
+            <p class="eyebrow">QuickBuy</p>
+            <h2 data-i18n="quickTitle">Быстрый заказ</h2>
+            <p data-i18n="quickText">
+              Оставьте имя и номер телефона. После этого откроется WhatsApp с готовым сообщением для быстрого заказа.
+            </p>
+          </div>
+
+          <form class="glass-card order-form" id="orderForm">
+            <label>
+              <span data-i18n="productField">Выбранный товар</span>
+              <select id="productSelect" name="product" required></select>
+            </label>
+            <label>
+              <span data-i18n="nameField">Имя</span>
+              <input id="nameInput" name="name" type="text" required />
+            </label>
+            <label>
+              <span data-i18n="phoneField">Номер телефона</span>
+              <input id="phoneInput" name="phone" type="tel" inputmode="tel" placeholder="+994 50 000 00 00" required />
+            </label>
+            <button class="button button-primary button-full" type="submit" data-i18n="submitOrder">Отправить заявку</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="section reveal consult-row glass-card">
+          <div>
+            <p class="eyebrow">WhatsApp</p>
+            <h2 data-i18n="consultTitle">Нужна быстрая консультация?</h2>
+          </div>
+          <a class="button button-secondary" href="https://wa.me/994706642848" target="_blank" rel="noreferrer">
+            WhatsApp
+          </a>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p data-i18n="footerText">
+          Vertex — smart living магазин в Баку с curated-подборкой гаджетов для дома, gaming-setup и современной городской жизни.
+        </p>
+      </footer>
+    </div>
+
+    <div class="sticky-buy glass-card">
+      <div>
+        <strong id="stickyProduct">Vertex Gravity</strong>
+        <span id="stickyMeta" data-i18n="stickyText">Быстрый заказ без регистрации и лишних шагов</span>
+      </div>
+      <a class="button button-primary" href="#quickbuy" data-i18n="orderNow">Заказать сейчас</a>
+    </div>
+
+    <template id="productCardTemplate">
+      <article class="product-card glass-card">
+        <div class="product-media">
+          <img class="product-image" alt="" />
+          <span class="product-chip" data-i18n="catalogBadge">Vertex Select</span>
+        </div>
+        <div class="product-body">
+          <div class="product-head">
+            <div>
+              <p class="product-label" data-i18n="catalogBadge">Vertex Select</p>
+              <h3 class="product-name"></h3>
+              <p class="product-subtitle"></p>
+            </div>
+            <div class="price-box">
+              <strong class="product-price"></strong>
+              <span class="product-stock" data-i18n="inStock">В наличии</span>
+            </div>
+          </div>
+
+          <div class="problem-solution">
+            <p class="product-problem"></p>
+            <p class="product-solution"></p>
+          </div>
+
+          <ul class="product-features"></ul>
+
+          <div class="product-footer">
+            <span class="product-supplier"></span>
+            <div class="product-actions">
+              <button type="button" class="button button-primary product-cart-button" data-i18n="addToCart">В корзину</button>
+              <button type="button" class="button button-secondary product-button" data-i18n="chooseProduct">Быстрый заказ</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
