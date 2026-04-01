@@ -387,12 +387,17 @@ function getCartTotalValue() {
 }
 
 function formatAzn(value) {
-  return new Intl.NumberFormat(currentLang === "az" ? "az-AZ" : "ru-RU", {
-    style: "currency",
-    currency: "AZN",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value);
+  try {
+    return new Intl.NumberFormat(currentLang === "az" ? "az-AZ" : "ru-RU", {
+      style: "currency",
+      currency: "AZN",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(value);
+  } catch (error) {
+    console.error("Currency formatter fallback:", error);
+    return `₼${Number(value).toFixed(2)}`;
+  }
 }
 
 function openWhatsApp(message) {
@@ -710,6 +715,13 @@ function setupMotionBackground() {
 }
 
 function setupReveal() {
+  if (!("IntersectionObserver" in window)) {
+    document.querySelectorAll(".reveal").forEach((item) => item.classList.add("visible"));
+    return;
+  }
+
+  document.body.classList.add("reveal-enabled");
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -804,7 +816,18 @@ cartClearButton.addEventListener("click", () => {
 form.addEventListener("submit", submitOrder);
 cartForm.addEventListener("submit", submitCart);
 
-setupMotionBackground();
-setupReveal();
-setupProtection();
 applyTranslations();
+setupProtection();
+
+try {
+  setupMotionBackground();
+} catch (error) {
+  console.error("Motion background disabled:", error);
+}
+
+try {
+  setupReveal();
+} catch (error) {
+  console.error("Reveal animation disabled:", error);
+  document.querySelectorAll(".reveal").forEach((item) => item.classList.add("visible"));
+}

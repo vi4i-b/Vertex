@@ -160,12 +160,18 @@ img {
 
 .hero,
 .section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-enabled .hero,
+.reveal-enabled .section {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.reveal.visible {
+.reveal-enabled .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
