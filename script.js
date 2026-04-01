@@ -662,6 +662,10 @@ function applyTranslations() {
 }
 
 function setupMotionBackground() {
+  if (window.innerWidth <= 767) {
+    return;
+  }
+
   const root = document.documentElement;
   let pointerX = window.innerWidth / 2;
   let pointerY = window.innerHeight / 2;
@@ -745,6 +749,11 @@ function setupMotionBackground() {
 }
 
 function setupReveal() {
+  if (window.innerWidth <= 767) {
+    document.querySelectorAll(".reveal").forEach((item) => item.classList.add("visible"));
+    return;
+  }
+
   if (!("IntersectionObserver" in window)) {
     document.querySelectorAll(".reveal").forEach((item) => item.classList.add("visible"));
     return;
