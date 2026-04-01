@@ -477,58 +477,88 @@ function clearCart() {
 }
 
 function renderProducts() {
-  productGrid.innerHTML = "";
+  if (!productGrid || !productTemplate || !("content" in productTemplate)) {
+    return;
+  }
 
-  products.forEach((product) => {
-    const fragment = productTemplate.content.cloneNode(true);
-    const card = fragment.querySelector(".product-card");
-    const image = fragment.querySelector(".product-image");
-    const name = fragment.querySelector(".product-name");
-    const subtitle = fragment.querySelector(".product-subtitle");
-    const price = fragment.querySelector(".product-price");
-    const problem = fragment.querySelector(".product-problem");
-    const solution = fragment.querySelector(".product-solution");
-    const features = fragment.querySelector(".product-features");
-    const supplier = fragment.querySelector(".product-supplier");
-    const orderButton = fragment.querySelector(".product-button");
-    const cartButton = fragment.querySelector(".product-cart-button");
+  try {
+    const nextContent = document.createDocumentFragment();
 
-    if (product.id === selectedProduct.id) {
-      card.classList.add("is-selected");
+    products.forEach((product) => {
+      const fragment = productTemplate.content.cloneNode(true);
+      const card = fragment.querySelector(".product-card");
+      const image = fragment.querySelector(".product-image");
+      const name = fragment.querySelector(".product-name");
+      const subtitle = fragment.querySelector(".product-subtitle");
+      const price = fragment.querySelector(".product-price");
+      const problem = fragment.querySelector(".product-problem");
+      const solution = fragment.querySelector(".product-solution");
+      const features = fragment.querySelector(".product-features");
+      const supplier = fragment.querySelector(".product-supplier");
+      const orderButton = fragment.querySelector(".product-button");
+      const cartButton = fragment.querySelector(".product-cart-button");
+
+      if (
+        !card ||
+        !image ||
+        !name ||
+        !subtitle ||
+        !price ||
+        !problem ||
+        !solution ||
+        !features ||
+        !supplier ||
+        !orderButton ||
+        !cartButton
+      ) {
+        throw new Error("Catalog template is incomplete");
+      }
+
+      if (product.id === selectedProduct.id) {
+        card.classList.add("is-selected");
+      }
+
+      image.src = product.image;
+      image.alt = product.name;
+      name.textContent = product.name;
+      subtitle.textContent = product.subtitle[currentLang];
+      price.textContent = formatAzn(calculateRetailPrice(product.basePriceUsd));
+      problem.textContent = product.problem[currentLang];
+      solution.textContent = product.solution[currentLang];
+      supplier.textContent = product.supplierText[currentLang];
+      orderButton.textContent = content[currentLang].chooseProduct;
+      cartButton.textContent = content[currentLang].addToCart;
+
+      product.features[currentLang].forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        features.appendChild(li);
+      });
+
+      orderButton.addEventListener("click", () => {
+        selectedProduct = product;
+        productSelect.value = product.id;
+        syncSticky();
+        renderProducts();
+        document.getElementById("quickbuy").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      cartButton.addEventListener("click", () => {
+        addToCart(product.id);
+        document.getElementById("cart").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      nextContent.appendChild(fragment);
+    });
+
+    while (productGrid.firstChild) {
+      productGrid.removeChild(productGrid.firstChild);
     }
 
-    image.src = product.image;
-    image.alt = product.name;
-    name.textContent = product.name;
-    subtitle.textContent = product.subtitle[currentLang];
-    price.textContent = formatAzn(calculateRetailPrice(product.basePriceUsd));
-    problem.textContent = product.problem[currentLang];
-    solution.textContent = product.solution[currentLang];
-    supplier.textContent = product.supplierText[currentLang];
-    orderButton.textContent = content[currentLang].chooseProduct;
-    cartButton.textContent = content[currentLang].addToCart;
-
-    product.features[currentLang].forEach((item) => {
-      const li = document.createElement("li");
-      li.textContent = item;
-      features.appendChild(li);
-    });
-
-    orderButton.addEventListener("click", () => {
-      selectedProduct = product;
-      productSelect.value = product.id;
-      syncSticky();
-      renderProducts();
-      document.getElementById("quickbuy").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-
-    cartButton.addEventListener("click", () => {
-      addToCart(product.id);
-      document.getElementById("cart").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-
-    productGrid.appendChild(fragment);
-  });
+    productGrid.appendChild(nextContent);
+  } catch (error) {
+    console.error("Catalog render fallback:", error);
+  }
 }
 
 function renderCart() {
