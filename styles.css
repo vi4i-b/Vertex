@@ -920,22 +920,28 @@ img {
   }
 
   .showcase-stack {
-    min-height: 24rem;
+    min-height: 16rem;
   }
 
   .showcase-card-main {
-    inset: 1.2rem 2.1rem 0 0;
+    inset: 0.6rem 3.8rem 0.6rem 0;
   }
 
   .showcase-card-top {
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
+    top: 0.2rem;
   }
 
   .showcase-card-bottom {
-    width: 11rem;
-    height: 11rem;
-    right: 0.4rem;
+    width: 8rem;
+    height: 8rem;
+    right: 0.15rem;
+    bottom: 0.2rem;
+  }
+
+  .showcase-note {
+    display: none;
   }
 
   .section-head,
