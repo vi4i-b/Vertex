@@ -1,5 +1,6 @@
 const USD_TO_AZN = 1.7;
 const MARKUP_RATE = 1.5;
+const PRICE_INCREASE_RATE = 1.1;
 const WHATSAPP_NUMBER = "994706642848";
 const CART_STORAGE_KEY = "vertex-cart";
 
@@ -371,7 +372,7 @@ function getProductById(productId) {
 }
 
 function calculateRetailPrice(basePriceUsd) {
-  return Math.round(basePriceUsd * USD_TO_AZN * MARKUP_RATE * 100) / 100;
+  return Math.round(basePriceUsd * USD_TO_AZN * MARKUP_RATE * PRICE_INCREASE_RATE * 100) / 100;
 }
 
 function getCartItemsCount() {
