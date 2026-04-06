@@ -1,6 +1,5 @@
 const USD_TO_AZN = 1.7;
 const MARKUP_RATE = 1.5;
-const PRICE_INCREASE_RATE = 1.1;
 const WHATSAPP_NUMBER = "994706642848";
 const CART_STORAGE_KEY = "vertex-cart";
 
@@ -9,21 +8,21 @@ const content = {
     location: "Баку, Азербайджан",
     heroTitle: "Vertex — умные гаджеты для красивого дома",
     heroText:
-      "Магазин smart living решений для людей, которые любят комфорт, чистую эстетику и ощущение будущего в повседневной жизни.",
+      "Подборка актуальных smart-находок из AliExpress для безопасности, света и атмосферного интерьера с уже посчитанной розничной ценой.",
     orderNow: "Заказать сейчас",
     catalogCta: "Смотреть каталог",
     aboutLabel: "О магазине",
     aboutText:
-      "Vertex подбирает современные устройства для дома и setup-зоны без дешевого маркетингового шума: только те гаджеты, которые реально выглядят эффектно, решают бытовые задачи и подходят под быстрый городской ритм Баку.",
+      "Vertex собирает понятный каталог реальных товаров из AliExpress для дома и setup-зоны: мы отбираем сильные позиции, добавляем расчет с учетом доставки и показываем готовую цену для продажи в Баку.",
     aboutPoint1: "Премиальная подача и понятный выбор",
     aboutPoint2: "Только под заказ: 7-20 дней",
     aboutPoint3: "Помощь с запуском и настройкой",
     featured: "Собранная подборка",
     featuredText:
-      "Реальные найденные товары уже добавлены в каталог с обновленными фото и локальной розничной ценой.",
+      "В каталоге только текущие позиции из AliExpress. Розничная цена считается по схеме: закупка + доставка, затем наценка 50%.",
     introTitle: "Технологии, которые делают пространство дороже на вид и удобнее в жизни",
     introText:
-      "Vertex ориентирован на молодых специалистов, геймеров и любителей гаджетов, которые хотят не просто купить устройство, а собрать вокруг себя современную и эстетичную среду.",
+      "Новый каталог собран вокруг камер безопасности, RGB-подсветки и атмосферного декора для тех, кто хочет быстро обновить дом, рабочую зону или подарок без бесконечного поиска по маркетплейсам.",
     deliveryLabel1: "Формат доставки",
     deliveryValue1: "Под заказ",
     deliveryLabel2: "Средний срок",
@@ -32,7 +31,7 @@ const content = {
       "Точный срок зависит от поставщика и подтверждается после оформления заказа.",
     productsTitle: "Каталог Vertex",
     productsText:
-      "Витрина построена на реальных товарах: мы обновили карточки, подставили их фотографии и выставили готовую цену для магазина.",
+      "Все карточки привязаны к реальным товарам из AliExpress, а цены пересчитаны по формуле: закупка + ориентир доставки, затем розничная наценка 50%.",
     cartTitle: "Корзина покупок",
     cartText:
       "Добавляйте несколько товаров, меняйте количество и отправляйте весь заказ одним сообщением в WhatsApp.",
@@ -67,11 +66,11 @@ const content = {
     error: "Не удалось открыть WhatsApp. Проверьте браузер или приложение WhatsApp.",
     consultTitle: "Нужна быстрая консультация?",
     footerText:
-      "Vertex — smart living магазин в Баку с curated-подборкой гаджетов для дома, gaming-setup и современной городской жизни.",
+      "Vertex — smart living магазин в Баку с актуальной подборкой товаров из AliExpress для дома, света, безопасности и современной городской жизни.",
     stickyText: "Быстрый заказ без регистрации и лишних шагов",
     stickyCartPrefix: "Корзина",
     catalogBadge: "Vertex Select",
-    inStock: "В наличии",
+    inStock: "Под заказ",
     chooseProduct: "Быстрый заказ",
     addToCart: "В корзину",
     remove: "Удалить",
@@ -80,6 +79,7 @@ const content = {
     waProduct: "Товар",
     waProducts: "Товары",
     waPrice: "Цена",
+    waSource: "Ссылка закупки",
     waTotal: "Итого",
     waName: "Имя",
     waPhone: "Телефон",
@@ -89,21 +89,21 @@ const content = {
     location: "Bakı, Azərbaycan",
     heroTitle: "Vertex — gözəl məkan üçün ağıllı qadcetlər",
     heroText:
-      "Rahatlığı, təmiz estetikanı və gündəlik həyatda gələcək hissini sevən insanlar üçün smart living mağazası.",
+      "AliExpress-dən seçilmiş təhlükəsizlik, işıq və dekor qadcetləri artıq çatdırılma nəzərə alınmış hazır satış qiyməti ilə təqdim olunur.",
     orderNow: "İndi sifariş et",
     catalogCta: "Kataloqa bax",
     aboutLabel: "Mağaza haqqında",
     aboutText:
-      "Vertex ev və setup zonası üçün müasir cihazları ucuz bazar səs-küyü olmadan seçir: yalnız həqiqətən effektli görünən, gündəlik problemi həll edən və Bakının sürətli ritminə uyğun qadcetlər.",
+      "Vertex ev və setup zonası üçün real AliExpress məhsullarından aydın kataloq qurur: güclü modelləri seçir, çatdırılmanı qiymətə əlavə edir və Bakı üçün hazır satış qiymətini göstərir.",
     aboutPoint1: "Premium təqdimat və aydın seçim",
     aboutPoint2: "Yalnız sifarişlə: 7-20 gün",
     aboutPoint3: "Quraşdırma və qoşulma dəstəyi",
     featured: "Toplanmış seçim",
     featuredText:
-      "Tapılmış real məhsullar artıq kataloqa yenilənmiş foto və yerli pərakəndə qiymətlə əlavə olunub.",
+      "Kataloqda yalnız aktual AliExpress məhsulları var. Pərakəndə qiymət sxemi belədir: alış + çatdırılma, sonra 50% marja.",
     introTitle: "Məkana həm daha bahalı görünüş, həm də real rahatlıq verən texnologiyalar",
     introText:
-      "Vertex gənc mütəxəssislər, geymerlər və qadcet sevənlər üçün sadəcə cihaz deyil, estetik və müasir mühit qurmağa kömək edir.",
+      "Yeni kataloq təhlükəsizlik kameraları, RGB işıqlandırma və atmosfer dekoru üzərində qurulub ki, evi, iş zonasını və ya hədiyyə seçimini daha tez və rahat yeniləmək mümkün olsun.",
     deliveryLabel1: "Çatdırılma formatı",
     deliveryValue1: "Sifarişlə",
     deliveryLabel2: "Orta müddət",
@@ -112,7 +112,7 @@ const content = {
       "Dəqiq müddət tədarükçüdən asılıdır və sifarişdən sonra təsdiqlənir.",
     productsTitle: "Vertex kataloqu",
     productsText:
-      "Vitrin real məhsullar üzərində qurulub: kartlara faktiki şəkillər əlavə edildi və mağaza üçün hazır qiymət hesablandı.",
+      "Bütün kartlar real AliExpress məhsullarına bağlanıb və qiymətlər belə hesablanıb: alış + təxmini çatdırılma, daha sonra 50% satış marjası.",
     cartTitle: "Alış-veriş səbəti",
     cartText:
       "Bir neçə məhsul əlavə edin, sayını dəyişin və bütün sifarişi bir WhatsApp mesajı ilə göndərin.",
@@ -147,11 +147,11 @@ const content = {
     error: "WhatsApp açılmadı. Brauzeri və ya WhatsApp tətbiqini yoxlayın.",
     consultTitle: "Sürətli məsləhət lazımdır?",
     footerText:
-      "Vertex — Bakı üçün ev, gaming-setup və müasir şəhər həyatı üzrə seçilmiş smart living mağazasıdır.",
+      "Vertex — Bakı üçün AliExpress əsaslı ev, işıq, təhlükəsizlik və müasir şəhər həyatı məhsullarını seçən smart living mağazasıdır.",
     stickyText: "Qeydiyyatsız və əlavə addımsız sürətli sifariş",
     stickyCartPrefix: "Səbət",
     catalogBadge: "Vertex Select",
-    inStock: "Stokda var",
+    inStock: "Sifarişlə",
     chooseProduct: "Sürətli sifariş",
     addToCart: "Səbətə at",
     remove: "Sil",
@@ -160,6 +160,7 @@ const content = {
     waProduct: "Məhsul",
     waProducts: "Məhsullar",
     waPrice: "Qiymət",
+    waSource: "Alış linki",
     waTotal: "Cəmi",
     waName: "Ad",
     waPhone: "Telefon",
@@ -169,148 +170,127 @@ const content = {
 
 const products = [
   {
-    id: "gravity",
-    name: "Vertex Gravity",
-    image: "media/products/gravity.jpg",
-    sourceStore: "Humiii",
-    sourceModel: "Zero Gravity Humidifier",
-    sourceUrl: "https://humiii.com/products/zero-gravity-humidifier",
-    basePriceUsd: 49.99,
+    id: "doorview-1080",
+    name: "Vertex DoorView 1080",
+    image: "media/products/doorview.jpg",
+    sourceStore: "AliExpress",
+    sourceModel:
+      "Tuya 1080P WiFi Door Bell Camera Google Alexa Smart Life Video Peephole PIR Motion Detector Digital Door Viewer with Intercom",
+    sourceUrl: "https://aliexpress.ru/item/1005008424643638.html?sku_id=12000045017670074",
+    basePriceUsd: 58.02,
+    shippingUsd: 10,
     subtitle: {
-      ru: "Антигравитационный увлажнитель с атмосферной подсветкой",
-      az: "Atmosferik işıqla antigravitasiya nəmləndiricisi",
+      ru: "Умный видеоглазок с дверным звонком, PIR-датчиком и интеркомом",
+      az: "Qapı zəngi, PIR sensoru və interkomu olan ağıllı video gözlük",
     },
     problem: {
-      ru: "Сухой воздух и скучная атмосфера быстро убивают ощущение уюта.",
-      az: "Quru hava və darıxdırıcı mühit rahatlıq hissini tez zəiflədir.",
+      ru: "Обычный глазок не записывает визиты и не показывает, кто подошел к двери, когда вас нет дома.",
+      az: "Adi gözlük səfərləri yazmır və siz evdə olmayanda qapıya kimin gəldiyini göstərmir.",
     },
     solution: {
-      ru: "Эффект падающих капель и мягкий свет превращают спальню или desk-zone в premium mood-space.",
-      az: "Damcı effekti və yumşaq işıq yataq otağını və ya desk-zone-u premium mood-space-a çevirir.",
+      ru: "1080p-камера, уведомления о движении и двусторонняя связь помогают держать вход под контролем из любой точки.",
+      az: "1080p kamera, hərəkət bildirişləri və iki tərəfli səs əlaqəsi girişi istənilən yerdən nəzarətdə saxlamağa kömək edir.",
     },
     features: {
-      ru: ["Ультразвуковое увлажнение", "Подсветка", "Эффектный интерьерный акцент"],
-      az: ["Ultrasəs nəmləndirmə", "İşıqlandırma", "Effektli interyer aksenti"],
+      ru: ["1080p видео", "PIR-детекция", "Двусторонняя связь"],
+      az: ["1080p video", "PIR deteksiya", "İki tərəfli səs"],
     },
     supplierText: {
-      ru: "Подходит для спальни, кабинета и минималистичного интерьера.",
-      az: "Yataq otağı, iş guşəsi və minimalist interyer üçün uyğundur.",
+      ru: "Подходит для квартиры, офиса, апартаментов и контроля входной двери.",
+      az: "Mənzil, ofis, apartament və giriş qapısına nəzarət üçün uyğundur.",
     },
   },
   {
-    id: "secure-touch",
-    name: "Vertex Secure Touch",
-    image: "media/products/secure-touch.jpg",
-    sourceStore: "IRONZON",
-    sourceModel: "191Y Fingerprint Door Lock with Keypad & Handle",
-    sourceUrl: "https://ironzon.com/products/191y-fingerprint-door-lock",
-    basePriceUsd: 59.99,
+    id: "guard-dual-8mp",
+    name: "Vertex Guard Dual 8MP",
+    image: "media/products/guard-dual.jpg",
+    sourceStore: "AliExpress",
+    sourceModel:
+      "8MP Wifi Camera Dual Lens Security Wireless Outdoor Cameras Two-way Audio AI Human Tracking Color Night Vision Baby Monitor",
+    sourceUrl: "https://aliexpress.ru/item/1005011609354601.html?sku_id=12000056049026498",
+    basePriceUsd: 24.6,
+    shippingUsd: 10,
     subtitle: {
-      ru: "Биометрическая ручка-замок с клавиатурой и smart-доступом",
-      az: "Klaviaturalı və smart girişli biometrik qapı dəstəyi",
+      ru: "Двухлинзовая уличная Wi‑Fi камера с ночным цветным режимом",
+      az: "Rəngli gecə görünüşlü ikili linzalı Wi‑Fi küçə kamerası",
     },
     problem: {
-      ru: "Ключи теряются, а обычный замок не дает ощущения современного контроля.",
-      az: "Açarlar itir və adi qıfıl müasir nəzarət hissi vermir.",
+      ru: "Одна камера часто оставляет слепые зоны во дворе, у входа или возле фасада.",
+      az: "Tək kamera həyət, giriş və ya fasad yanında çox vaxt kor zonalar buraxır.",
     },
     solution: {
-      ru: "Отпечаток, PIN и приложение делают вход быстрым, безопасным и визуально дорогим.",
-      az: "Barmaq izi, PIN və tətbiq girişi həm sürətli, həm təhlükəsiz, həm də premium edir.",
+      ru: "Две линзы, AI-отслеживание человека и цветное ночное видение помогают держать периметр под более уверенным контролем.",
+      az: "İki linza, AI insan izləmə və rəngli gecə görünüşü ətrafı daha inamlı nəzarətdə saxlamağa kömək edir.",
     },
     features: {
-      ru: ["Fingerprint + PIN", "App-ready", "Современный lever-дизайн"],
-      az: ["Barmaq izi + PIN", "Tətbiq dəstəyi", "Müasir lever dizayn"],
+      ru: ["8MP dual lens", "Color night vision", "AI human tracking"],
+      az: ["8MP dual lens", "Rəngli gecə görünüşü", "AI insan izləmə"],
     },
     supplierText: {
-      ru: "Хорошо подходит для квартиры, кабинета или private-room зоны.",
-      az: "Mənzil, kabinet və ya private-room zonası üçün uyğundur.",
+      ru: "Подходит для двора, магазина, фасада дома и наружного наблюдения.",
+      az: "Həyət, mağaza, ev fasadı və açıq hava müşahidəsi üçün uyğundur.",
     },
   },
   {
-    id: "glide",
-    name: "Vertex Glide",
-    image: "media/products/glide.png",
-    sourceStore: "Adaprox",
-    sourceModel: "CurtainBot",
-    sourceUrl: "https://www.adaprox.io/ja/products/curtain-robot",
-    basePriceUsd: 64.99,
+    id: "glow-sync-rgbic",
+    name: "Vertex Glow Sync RGBIC",
+    image: "media/products/glow-sync.jpg",
+    sourceStore: "AliExpress",
+    sourceModel:
+      "RGBIC LED Light Strip Camera TV Screen Synchronization Bluetooth APP Music Sync Game Bedroom TV Background Ambient Light",
+    sourceUrl: "https://aliexpress.ru/item/1005004714341804.html?sku_id=12000044002460802",
+    basePriceUsd: 26.86,
+    shippingUsd: 6,
     subtitle: {
-      ru: "Умный робот для штор и ежедневных light-сценариев",
-      az: "Pərdələr və gündəlik işıq ssenariləri üçün ağıllı robot",
+      ru: "RGBIC-подсветка с синхронизацией экрана для ТВ и gaming setup",
+      az: "TV və gaming setup üçün ekran sinxronlu RGBIC işıqlandırma",
     },
     problem: {
-      ru: "Рутина со шторами каждый день съедает ощущение технологичного дома.",
-      az: "Pərdə rutini hər gün ağıllı ev hissini zəiflədir.",
+      ru: "Обычный свет не дает вау-эффекта для фильмов, игр и контент-зоны.",
+      az: "Adi işıq film, oyun və kontent zonasına wow effekti vermir.",
     },
     solution: {
-      ru: "Автоматическое открытие и закрытие штор добавляет дому комфорт и cinematic-ритм.",
-      az: "Pərdələrin avtomatik açılıb-bağlanması evə həm rahatlıq, həm cinematic ritm verir.",
+      ru: "Подсветка повторяет цвета экрана и музыку, из-за чего ТВ-зона или desk setup выглядят заметно живее и дороже.",
+      az: "İşıq ekran rənglərini və musiqini izləyir, buna görə TV zona və ya desk setup daha canlı və bahalı görünür.",
     },
     features: {
-      ru: ["App control", "Сценарии по времени", "Быстрый домашний upgrade"],
-      az: ["Tətbiq idarəsi", "Vaxta görə ssenarilər", "Sürətli home upgrade"],
+      ru: ["Screen sync", "Music mode", "APP + Bluetooth"],
+      az: ["Screen sync", "Music mode", "APP + Bluetooth"],
     },
     supplierText: {
-      ru: "Для спальни, гостиной и умного morning-routine сценария.",
-      az: "Yataq otağı, qonaq otağı və smart morning-routine üçün.",
+      ru: "Лучше всего раскрывается у ТВ, монитора, streaming-зоны и gaming desk.",
+      az: "TV, monitor, streaming zona və gaming desk yanında daha yaxşı görünür.",
     },
   },
   {
-    id: "prism",
-    name: "Vertex Prism",
-    image: "media/products/prism.jpg",
-    sourceStore: "Best Buy",
-    sourceModel: "Nanoleaf Shapes Hexagons Smarter Kit (7 Panels)",
-    sourceUrl: "https://www.bestbuy.com/site/nanoleaf-shapes-hexagons-smarter-kit-7-panels-multicolor/6426520.p",
-    basePriceUsd: 134.99,
+    id: "astro-beam",
+    name: "Vertex Astro Beam",
+    image: "media/products/astro-beam.jpg",
+    sourceStore: "AliExpress",
+    sourceModel:
+      "LED Star Galaxies Projector Night Light Astronaut Starry Sky Bedroom Room Decor Children's Gift - LED Atmosphere Creating Lamp",
+    sourceUrl: "https://aliexpress.ru/item/1005010034390964.html?sku_id=12000050897821148",
+    basePriceUsd: 11.74,
+    shippingUsd: 5,
     subtitle: {
-      ru: "Гексагоновые smart-панели для gaming и content setup",
-      az: "Gaming və content setup üçün heksaqon smart panellər",
+      ru: "Проектор звездного неба в форме астронавта для спальни и desk-zone",
+      az: "Yataq otağı və desk-zone üçün astronavt formalı ulduz proyektoru",
     },
     problem: {
-      ru: "Обычная стена не создает wow-эффект для игр, стримов и контента.",
-      az: "Adi divar oyun, strim və kontent üçün wow effekti yaratmır.",
+      ru: "Пустая комната вечером выглядит холодно и не создает атмосферу отдыха или подарочного wow-эффекта.",
+      az: "Boş otaq axşam soyuq görünür və nə istirahət, nə də hədiyyə wow effekti yaradır.",
     },
     solution: {
-      ru: "RGB-сценарии превращают комнату в signature-зону с дорогим digital-настроением.",
-      az: "RGB ssenariləri otağı bahalı digital mood verən signature-zonaya çevirir.",
+      ru: "Проекция звезд и мягкое свечение быстро делают спальню, детскую или gaming-room более атмосферной.",
+      az: "Ulduz proyeksiyası və yumşaq işıq yataq otağını, uşaq otağını və ya gaming-room-u daha atmosferli edir.",
     },
     features: {
-      ru: ["Modular design", "Music sync", "Setup-зона с характером"],
-      az: ["Modul dizayn", "Musiqi sinxronu", "Xarakterli setup-zona"],
+      ru: ["Galaxy projection", "Atmosphere light", "Gift-ready design"],
+      az: ["Galaxy projection", "Atmosfer işığı", "Hədiyyəyə uyğun dizayn"],
     },
     supplierText: {
-      ru: "Идеально для gaming-room, streaming background и creative space.",
-      az: "Gaming-room, streaming background və creative space üçün idealdır.",
-    },
-  },
-  {
-    id: "pulse-dock",
-    name: "Vertex Pulse Dock",
-    image: "media/products/pulse-dock.jpg",
-    sourceStore: "Shopenzer",
-    sourceModel: "3 In 1 Wireless Charger Station",
-    sourceUrl: "https://www.shopenzer.com/products/3-In-1-Wireless-Charger-Station",
-    basePriceUsd: 89.99,
-    subtitle: {
-      ru: "3-in-1 зарядка с часами и ambient-light модулем",
-      az: "Saat və ambient-light modullu 3-ü 1-də şarj stansiyası",
-    },
-    problem: {
-      ru: "Провода и хаос на столе убивают clean setup и удобство.",
-      az: "Naqillər və qarışıqlıq həm clean setup-ı, həm rahatlığı pozur.",
-    },
-    solution: {
-      ru: "Одна док-станция собирает телефон, часы и наушники в аккуратный premium desk-center.",
-      az: "Bir dock stansiyası telefon, saat və qulaqcığı səliqəli premium desk-center-a yığır.",
-    },
-    features: {
-      ru: ["3-in-1 charging", "Clock display", "RGB night light"],
-      az: ["3-ü 1-də şarj", "Saat ekranı", "RGB night light"],
-    },
-    supplierText: {
-      ru: "Лучше всего раскрывается в рабочем setup и прикроватной зоне.",
-      az: "İş setup-ında və çarpayı yanında daha yaxşı görünür.",
+      ru: "Подходит для спальни, детской, игровой комнаты и подарка с wow-эффектом.",
+      az: "Yataq otağı, uşaq otağı, oyun otağı və wow-effektli hədiyyə üçün uyğundur.",
     },
   },
 ];
@@ -371,8 +351,9 @@ function getProductById(productId) {
   return products.find((product) => product.id === productId) || null;
 }
 
-function calculateRetailPrice(basePriceUsd) {
-  return Math.round(basePriceUsd * USD_TO_AZN * MARKUP_RATE * PRICE_INCREASE_RATE * 100) / 100;
+function calculateRetailPrice(product) {
+  const landedCost = product.basePriceUsd + (product.shippingUsd || 0);
+  return Math.round(landedCost * USD_TO_AZN * MARKUP_RATE * 100) / 100;
 }
 
 function getCartItemsCount() {
@@ -383,7 +364,7 @@ function getCartTotalValue() {
   return cart.reduce((sum, item) => {
     const product = getProductById(item.productId);
     if (!product) return sum;
-    return sum + calculateRetailPrice(product.basePriceUsd) * item.quantity;
+    return sum + calculateRetailPrice(product) * item.quantity;
   }, 0);
 }
 
@@ -407,12 +388,13 @@ function openWhatsApp(message) {
 }
 
 function buildSingleOrderMessage(customerName, customerPhone) {
-  const price = formatAzn(calculateRetailPrice(selectedProduct.basePriceUsd));
+  const price = formatAzn(calculateRetailPrice(selectedProduct));
 
   return [
     content[currentLang].waGreeting,
     `${content[currentLang].waProduct}: ${selectedProduct.name}`,
     `${content[currentLang].waPrice}: ${price}`,
+    `${content[currentLang].waSource}: ${selectedProduct.sourceUrl}`,
     `${content[currentLang].waName}: ${customerName}`,
     `${content[currentLang].waPhone}: ${customerPhone}`,
     `${content[currentLang].waLocation}: ${content[currentLang].location}`,
@@ -429,9 +411,10 @@ function buildCartMessage(customerName, customerPhone) {
     const product = getProductById(item.productId);
     if (!product) return;
 
-    const price = formatAzn(calculateRetailPrice(product.basePriceUsd));
-    const subtotal = formatAzn(calculateRetailPrice(product.basePriceUsd) * item.quantity);
+    const price = formatAzn(calculateRetailPrice(product));
+    const subtotal = formatAzn(calculateRetailPrice(product) * item.quantity);
     lines.push(`${index + 1}. ${product.name} x${item.quantity} — ${price} / ${subtotal}`);
+    lines.push(`${content[currentLang].waSource}: ${product.sourceUrl}`);
   });
 
   lines.push(`${content[currentLang].waTotal}: ${formatAzn(getCartTotalValue())}`);
@@ -523,7 +506,7 @@ function renderProducts() {
       image.alt = product.name;
       name.textContent = product.name;
       subtitle.textContent = product.subtitle[currentLang];
-      price.textContent = formatAzn(calculateRetailPrice(product.basePriceUsd));
+      price.textContent = formatAzn(calculateRetailPrice(product));
       problem.textContent = product.problem[currentLang];
       solution.textContent = product.solution[currentLang];
       supplier.textContent = product.supplierText[currentLang];
@@ -579,7 +562,7 @@ function renderCart() {
     const row = document.createElement("article");
     row.className = "cart-item";
 
-    const priceValue = calculateRetailPrice(product.basePriceUsd);
+    const priceValue = calculateRetailPrice(product);
     const subtotalValue = priceValue * item.quantity;
 
     row.innerHTML = `
@@ -625,7 +608,7 @@ function fillProductSelect() {
   products.forEach((product) => {
     const option = document.createElement("option");
     option.value = product.id;
-    option.textContent = `${product.name} — ${formatAzn(calculateRetailPrice(product.basePriceUsd))}`;
+    option.textContent = `${product.name} — ${formatAzn(calculateRetailPrice(product))}`;
     option.selected = product.id === selectedProduct.id;
     productSelect.appendChild(option);
   });
@@ -633,9 +616,7 @@ function fillProductSelect() {
 
 function syncSticky() {
   const count = getCartItemsCount();
-  stickyProduct.textContent = `${selectedProduct.name} • ${formatAzn(
-    calculateRetailPrice(selectedProduct.basePriceUsd),
-  )}`;
+  stickyProduct.textContent = `${selectedProduct.name} • ${formatAzn(calculateRetailPrice(selectedProduct))}`;
   stickyMeta.textContent =
     count > 0
       ? `${content[currentLang].stickyCartPrefix}: ${count}`
